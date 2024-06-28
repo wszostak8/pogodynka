@@ -1,0 +1,25 @@
+
+.swiper-button-prev.swiper-button-disabled {
+    display: none;
+}
+.swiper-button-next::after {
+    display: none;
+}
+.swiper-button-prev::after {
+    display: none;
+}
+
+:root {
+    --swiper-theme-color: black !important;
+}
+
+.swiper {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100%;
+}
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

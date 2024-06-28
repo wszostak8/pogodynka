@@ -1,0 +1,9 @@
+div.footer-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 50px;
+    margin: 0;
+    background: linear-gradient(90deg, #EDE3FA 0%, #D2B6F5 25%, #F2E7FF 91%, #D9C3F3 95.5%);
+}

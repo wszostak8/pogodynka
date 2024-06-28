@@ -1,5 +1,3 @@
-// WeatherData.js
-
 import React from 'react';
 
 const weatherSquareIMG = require("../images/nswe.svg").default;

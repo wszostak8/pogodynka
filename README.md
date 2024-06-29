@@ -22,6 +22,8 @@ target: 'http://127.0.0.1:5000' <- zmień na swój adres serwera backendowego
 
 Należy zainstalować pythona, następnie:
 
+###### pip install -r requirements.txt <- instaluje wszystkie niezbędne paczki
+
 ##### python app.py
 lub
 ##### python3 app.py 

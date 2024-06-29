@@ -20,11 +20,12 @@ target: 'http://127.0.0.1:5000' <- zmień na swój adres serwera backendowego
 
 ## Jak zainstalować projekt (backend REST API - Python)?
 
-Nalezy zainstalować pythona, następnie:
+Należy zainstalować pythona, następnie:
 
 ##### python app.py
 lub
-##### python3 app.py w zaleznosci od środowiska
+##### python3 app.py 
+w zależnosci od środowiska
 
 
 

@@ -7,33 +7,46 @@ import fetchWeather from '../../utils/FetchWeather';
 
 const WeatherBoxSlider = ({ city }) => {
   const [weather, setWeather] = useState(null);
-  // eslint-disable-next-line
-  const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchData = async (city) => {
+    let mounted = true; 
+
+    const fetchData = async () => {
       try {
         setLoading(true);
         await fetchWeather(city, setWeather, setError);
+
+        if (mounted) {
+          setLoading(false);
+        }
       } catch (err) {
-        console.error('Błąd podczas pobierania danych pogodowych:', err);
-        setError('Błąd podczas pobierania danych pogodowych');
-      } finally {
-        setLoading(false);
+        console.error('Błąd podczas pobierania danych pogodowych', err);
+        setError('Wystąpił błąd podczas pobierania danych pogodowych'); 
+        setLoading(false); 
       }
     };
 
-    if (city && !weather && !loading) {
-      fetchData(city);
+    if (city && mounted) {
+      fetchData();
     }
-  }, [city, weather, loading]);
+
+    return () => {
+      mounted = false; 
+    };
+  }, [city]); 
+
+  if (loading) return <p>Ładowanie...</p>; 
+
+  if (error) return <p>{error}</p>;
 
   if (!weather || !weather.weather_descriptions) return null;
 
   const translatedDescriptions = weather.weather_descriptions.map(
     desc => translationMap[desc] || desc
   );
+
 
   return (
    <div className="slider-weather-box">

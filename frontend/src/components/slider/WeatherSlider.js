@@ -36,77 +36,62 @@ const WeatherSliderResizeing = () => {
       modules={[Pagination, Navigation]}
       className="mySwiper"
     >
-      {isMobile ? (
-        <>
-          <SwiperSlide>
-            <div className="weatherbox-slider-container">
+      <SwiperSlide>
+        <div className="weatherbox-slider-container">
+          {isMobile ? (
+            <>
               <WeatherBoxSlider city='Warszawa' />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="weatherbox-slider-container">
-              <WeatherBoxSlider city='Krakow' />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="weatherbox-slider-container">
-              <WeatherBoxSlider city='Wroclaw' />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="weatherbox-slider-container">
-              <WeatherBoxSlider city='Lodz' />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="weatherbox-slider-container">
-              <WeatherBoxSlider city='Poznan' />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="weatherbox-slider-container">
-              <WeatherBoxSlider city='Gdansk' />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="weatherbox-slider-container">
-              <WeatherBoxSlider city='Szczecin' />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="weatherbox-slider-container">
-              <WeatherBoxSlider city='Lublin' />
-            </div>
-          </SwiperSlide>
-        </>
-      ) : (
-        <>
-          <SwiperSlide>
-            <div className="weatherbox-slider-container">
+            </>
+          ) : (
+            <>
               <WeatherBoxSlider city='Warszawa' />
               <WeatherBoxSlider city='Krakow' />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="weatherbox-slider-container">
+            </>
+          )}
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className="weatherbox-slider-container">
+          {isMobile ? (
+            <>
+              <WeatherBoxSlider city='Krakow' />
+            </>
+          ) : (
+            <>
               <WeatherBoxSlider city='Wroclaw' />
               <WeatherBoxSlider city='Lodz' />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="weatherbox-slider-container">
+            </>
+          )}
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className="weatherbox-slider-container">
+          {isMobile ? (
+            <>
+              <WeatherBoxSlider city='Wroclaw' />
+            </>
+          ) : (
+            <>
               <WeatherBoxSlider city='Poznan' />
               <WeatherBoxSlider city='Gdansk' />
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="weatherbox-slider-container">
+            </>
+          )}
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className="weatherbox-slider-container">
+          {isMobile ? (
+            <>
+              <WeatherBoxSlider city='Lodz' />
+            </>
+          ) : (
+            <>
               <WeatherBoxSlider city='Szczecin' />
               <WeatherBoxSlider city='Lublin' />
-            </div>
-          </SwiperSlide>
-        </>
-      )}
+            </>
+          )}
+        </div>
+      </SwiperSlide>
     </Swiper>
   );
 };

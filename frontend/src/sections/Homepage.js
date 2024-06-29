@@ -11,8 +11,7 @@ function Homepage() {
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState(null);
-  // eslint-disable-next-line
-  const [loading, setLoading] = useState(false);
+  const [setLoading] = useState(false);
 
   const handleFetchWeather = () => {
     if (city) {

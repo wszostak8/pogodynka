@@ -4,14 +4,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import '../../styles/homepage.css';
 import '../../styles/index.css';
 
-function WeatherSearch({ city, setCity, fetchWeather, error }) {
+function WeatherSearch({ city, setCity, fetchWeather }) {
 
   const handleKeyDown = (event) => {
     if (event.key === 'Enter' || event.key === 'Return') {
       fetchWeather();
     }
   };
-  
 
   const searchIcon = require('../../images/search.svg').default;
 

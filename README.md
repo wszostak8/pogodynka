@@ -1,22 +1,30 @@
-# Klucz API z weatherstack.com
+# Instrukcja uruchomienia oraz struktura projektu
+
+Do uzupełnienia klucz API z https://weatherstack.com
 Nalezy przejść do -> backend -> .env (uzupełnij swój klucz API)
 
-Domyślnie wszystkie zapytania (/weather/{city}) są przekierowywane na serwer backend-proxy,
-W razie potrzeby edycji, znajdziesz wszystkie informacje w setupProxy.js, jak i package.json
+Wszystkie zapytania (/weather/{city}) są przekierowywane na serwer backend-proxy,
+W razie potrzeby edycji adresu serwera backendowego, nalezy przejść do plików ponizej:
 
-## setupProxy.js
+##### frontend/setupProxy.js
 target: 'http://127.0.0.1:5000' <- zmień na swój adres serwera backendowego
 
-## package.json
+##### frontend/package.json
 "proxy": "http://127.0.0.1:5000", <- zmień na swój adres serwera backendowego
 
 
-###### Jak zainstalować projekt?
+## Jak zainstalować projekt (frontend - React)?
 
-npm install <- instaluje wszystkie niezbędne paczki
-npm start <- uruchamia projekt
+##### npm install <- instaluje wszystkie niezbędne paczki
+##### npm start <- uruchamia projekt
 
-# reszta komend domyślnie (React)
+## Jak zainstalować projekt (backend REST API - Python)?
+
+Nalezy zainstalować pythona, następnie:
+
+##### python app.py
+lub
+##### python3 app.py w zaleznosci od środowiska
 
 
 
